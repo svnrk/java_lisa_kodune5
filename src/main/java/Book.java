@@ -30,7 +30,8 @@ public class Book extends Product {
 
     @Override
     public Double getInventoryValue(){
-        double value = (double) (int)(this.getProductPrice() * this.getProductNumberInStock() * (100+restockingFee))/100;
+        double value = (double)(int) (super.getInventoryValue() * (100+restockingFee))/100;
+//        double value = (double) (int)(this.getProductPrice() * this.getProductNumberInStock() * (100+restockingFee))/100;
         return value;
     }
 }
